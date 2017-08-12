@@ -61,7 +61,6 @@ function confirm_delete()
   <tr>
     <td><?php echo $sr_no;?></td>
     <td><?php echo $todo_res->todo_name;?></td>
-    <td><?php echo $todo_res->created_date;?></td>
     <td><a href="edit_todo.php?id=<?php echo $todo_res->todo_id;?>&act=edit" target="_self">Edit</a>  
     | <a href="index.php?id=<?php echo $todo_res->todo_id;?>&act=del" onclick="return confirm_delete();">Delete</a> 
     | <a href="task_list.php?id=<?php echo $todo_res->todo_id;?>&act=list">Add Todo Task</a>
