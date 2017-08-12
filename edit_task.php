@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+include("database.php");
 $err_msg_tit='';
 $err_msg_st='';
 if(isset($_POST['submit']))
