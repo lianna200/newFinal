@@ -49,7 +49,6 @@ function confirm_delete()
     
 <table>
   <tr>
-  	<th>Sr No</th>
     <th>TODO Name</th>
     <th>Action</th>
   </tr>
