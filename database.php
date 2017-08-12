@@ -1,6 +1,6 @@
 
 <?php
-    $dsn = 'mysql:dbname=al224;host=sql1.njit.edu;todo_list.db';
+    $dsn = 'mysql:dbname=al224;host=sql1.njit.edu';
     $username = 'al224';
     $password = 'wSt5Tjc0';
     try {
