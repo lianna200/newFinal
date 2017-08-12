@@ -7,14 +7,16 @@ $todo_name = $_POST['todo_name'];
 	{
 		$err_msg = "Please enter Title";
 	}
-   else
+   else {
+    require_once('database.php');
    { // INSERT TODO LIST
-	mysqli_query($con,"INSERT INTO todo_list (todo_name) 
+	$query='INSERT INTO todo_list (todo_name)
 	VALUES ('".$todo_name."')");
 	mysqli_close($con);
    }
 }
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
