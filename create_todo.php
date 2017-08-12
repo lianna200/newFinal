@@ -1,19 +1,30 @@
 <?php
-include("database.php");
-$err_msg='';
-if(isset($_POST['submit'])){
-$todo_name = $_POST['todo_name'];
-	if($todo_name=="") //VALIDATION OF TITLE
-	{
-		$err_msg = "Please enter Title";
-	}
-   else {
+// Get the product data
+$todo_id = filter_input(INPUT_POST, 'todo_id', FILTER_VALIDATE_INT);
+$todo_name = filter_input(INPUT_POST, 'name');
+
+// Validate inputs
+if ($todo_id == null || $todo_id == false ||
+        $todo_name == null  {
+    $error = "Invalid product data. Check all fields and try again.";
+    include('error.php');
+} else {
     require_once('database.php');
-   { // INSERT TODO LIST
-	$query='INSERT INTO todo_list (todo_name)
-	VALUES ('".$todo_name."')");
-	mysqli_close($con);
-   }
+
+    // Add the product to the database  
+    $query = 'INSERT INTO todo_list
+                 (todo_id, todo_name)
+              VALUES
+                 (:todo_id, :todo_name)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':todo_id', $todo_id);
+    $statement->bindValue(':todo_name', $name);
+    $statement->execute();
+    $statement->closeCursor();
+
+    // Display the Product List page
+    include('index.php');
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
