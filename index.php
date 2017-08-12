@@ -51,7 +51,6 @@ function confirm_delete()
   <tr>
   	<th>Sr No</th>
     <th>TODO Name</th>
-    <th>Created Date</th>
     <th>Action</th>
   </tr>
   <?php
