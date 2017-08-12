@@ -12,7 +12,6 @@ $todo_name = $_POST['todo_name'];
 	mysqli_query($con,"INSERT INTO todo_list (todo_name) 
 	VALUES ('".$todo_name."')");
 	mysqli_close($con);
-	header("Location:index.php");
    }
 }
 ?>
