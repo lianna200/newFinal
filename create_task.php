@@ -14,7 +14,7 @@ $todo_id = $_POST['todo_id'];
 	{
 		$err_msg_st = "Please select Status";
 	}
-   // INSERT TODO ITEME
+   // INSERT TODO ITEM
    if($task_name!='' && $task_status>0)
    {  
 	mysqli_query($con,"INSERT INTO todo_items (task_name,task_status,todo_id) 
