@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+include("database.php");
 $todo_sql = mysqli_query($con,"SELECT * FROM todo_list");
 $count_todo = mysqli_num_rows($todo_sql);
 if(isset($_GET['act']) && $_GET['act']=="del" && $_GET['id']>0){ // DELETE TODO LIST
