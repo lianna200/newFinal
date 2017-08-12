@@ -1,7 +1,7 @@
 <?php
 // Get the product data
 $todo_id = filter_input(INPUT_POST, 'todo_id', FILTER_VALIDATE_INT);
-$todo_name = filter_input(INPUT_POST, 'name');
+$todo_name = filter_input(INPUT_POST, 'todo_name');
 
 // Validate inputs
 if ($todo_id == null || $todo_id == false ||
@@ -18,7 +18,7 @@ if ($todo_id == null || $todo_id == false ||
                  (:todo_id, :todo_name)';
     $statement = $db->prepare($query);
     $statement->bindValue(':todo_id', $todo_id);
-    $statement->bindValue(':todo_name', $name);
+    $statement->bindValue(':todo_name', $todo_name);
     $statement->execute();
     $statement->closeCursor();
 
