@@ -1,6 +1,6 @@
 13 lines (12 sloc)  328 Bytes
 <?p
-    $dsn = 'mysql:dbname=al224;host=sql1.njit.edu';
+    $dsn = 'mysql:dbname=al224;host=sql1.njit.edu;todo_list.db';
     $username = 'al224';
     $password = 'wSt5Tjc0';
     try {
