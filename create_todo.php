@@ -1,5 +1,5 @@
 <?php
-include("db.php");
+include("database.php");
 $err_msg='';
 if(isset($_POST['submit'])){
 $todo_name = $_POST['todo_name'];
